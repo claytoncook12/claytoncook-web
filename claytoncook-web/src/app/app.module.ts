@@ -12,12 +12,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
