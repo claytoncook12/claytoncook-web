@@ -5,11 +5,11 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"><mat-icon>home</mat-icon></a>
+      <a mat-list-item routerLink=""><mat-icon>home</mat-icon></a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Posts</a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Tags</a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Categories</a>
-      <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">About</a>
+      <a mat-list-item routerLink="about">About</a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Contact</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -23,7 +23,20 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Clayton Cook</span>
+      <button mat-button>
+        <span>
+          <h1>
+            Clayton Cook
+          </h1>
+        </span>
+      </button>
+      <span class="example-spacer"></span>
+      <button mat-icon-button>
+        <img src="../assets/social-icons/icons8-github-30.png" alt="github">
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
     </mat-toolbar>
 
     <!-- Add Content Here -->
