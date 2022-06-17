@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -36,7 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
