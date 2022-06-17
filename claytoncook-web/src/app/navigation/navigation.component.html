@@ -4,15 +4,19 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list class="mat-nav-list">
       <a mat-list-item routerLink=""><mat-icon>home</mat-icon></a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Posts</a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Tags</a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Categories</a>
       <a mat-list-item routerLink="about">About</a>
       <a mat-list-item href="#" style="pointer-events: none; opacity: 0.5;">Contact</a>
+      <app-footer></app-footer>
     </mat-nav-list>
+        
+  
   </mat-sidenav>
+  
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
@@ -31,11 +35,21 @@
         </span>
       </button>
       <span class="example-spacer"></span>
-      <button mat-icon-button>
-        <img src="../assets/social-icons/icons8-github-30.png" alt="github">
+      <button mat-icon-button class="nav-icon">
+        <a
+          href="https://github.com/claytoncook12"
+          target="_blank"
+        >
+          <img
+            style="height:35px;width:35px"
+            class="nav-icon-48" 
+            src="../assets/social-icons/icons8/icons8-github-48.png"
+            alt="github"
+          >
+        </a>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
+      <button mat-icon-button class="nav-icon" aria-label="email icon">
+        <mat-icon>email</mat-icon>
       </button>
     </mat-toolbar>
 
@@ -43,6 +57,5 @@
     <main>
       <router-outlet></router-outlet>
     </main>
-
   </mat-sidenav-content>
 </mat-sidenav-container>

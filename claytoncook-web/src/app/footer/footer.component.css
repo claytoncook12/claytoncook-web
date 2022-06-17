@@ -1,0 +1,16 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+    height: 120px;
+    background-color: inherit;
+}
+
+.footer-content {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.footer-row-bottom {
+    padding-bottom: 10px;
+}
